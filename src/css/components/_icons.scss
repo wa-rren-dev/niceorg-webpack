@@ -1,0 +1,99 @@
+// Old Bootstrap use a mixture of NICE.Glyphs and FontAwesome.
+// These have been replaced with, and consolidated into, nice-icons.
+//
+// Below we map the FontAwesome icons to the corresponding
+// icon in NICE Icons.
+//
+// See https://github.com/nhsevidence/nice-icons
+.fa {
+  @include icon-base;
+
+  &.icon-android:before {
+    content: nice-icon(android);
+  }
+
+  &.icon-apple:before {
+    content: nice-icon(apple);
+  }
+
+  &.icon-youtube-play:before {
+    content: nice-icon(youtube-play);
+  }
+
+  &.icon-linkedin-sign:before {
+    content: nice-icon(linkedin-sign);
+  }
+}
+
+// Old icons from NICE-Glyphs are all prefixed with "nice-"
+[class^='icon-nice'],
+[class*=' icon-nice'] {
+  @include icon-base;
+
+  &:before {
+    display: block;
+  }
+}
+
+// Support old icons from NICE-Glyphs with the corresponding icon in nice-icons
+@each $icon, $code in $nice-icons {
+  .icon-nice-#{ $icon }:before {
+    content: nice-icon($icon);
+  }
+}
+
+// Custom icons that don't follow the normal conventions
+.icon-linkedin {
+  @include icon-base;
+
+  &:before {
+    content: nice-icon(linkedin);
+    display: block;
+  }
+}
+
+.icon-question-sign {
+  @include icon-base;
+
+  &:before {
+    content: nice-icon(question-circle);
+    display: block;
+  }
+}
+
+.icon-chevron-right {
+  @include icon-base;
+
+  &:before {
+    content: nice-icon(chevron-right);
+    display: block;
+  }
+}
+
+.icon-chevron-left {
+  @include icon-base;
+
+  &:before {
+    content: nice-icon(chevron-left);
+    display: block;
+  }
+}
+
+.icon-play {
+  @include icon-base;
+
+  &:before {
+    content: nice-icon(play);
+    display: block;
+  }
+}
+
+.icon-volume-up {
+  @include icon-base;
+
+  &:before {
+    content: nice-icon(podcast);
+    display: block;
+  }
+}
+

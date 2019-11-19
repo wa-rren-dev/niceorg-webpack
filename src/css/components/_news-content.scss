@@ -1,0 +1,30 @@
+.news-content {
+  .blog-author {
+    @include font-size(h5);
+    color: $colour-nice-dark-grey;
+    display: block;
+    font-weight: normal;
+    margin-top: rem($spacing-small);
+  }
+
+  .date {
+    color: $colour-nice-dark-grey;
+    margin-bottom: rem($spacing-small);
+    margin-top: 0;
+  }
+
+  .news-header {
+    h1 {
+      clear: none;
+    }
+  }
+
+  img {
+    height: auto; // Some CMS images have inline height/width attributes
+    padding-right: em($spacing-medium);
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+}
