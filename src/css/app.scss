@@ -1,14 +1,14 @@
 @charset 'utf-8';
 
-// NICE Design System overrides
-// $nice-font-base-path: '~@nice-digital/icons/dist/';
+// @import "~@nice-digital/icons/dist/_nice-icons";
 
-// @import '~@nice-digital/design-system/src/stylesheets/nice-design-system';
+// niceDesign System overrides
+$nice-font-base-path: "~@nice-digital/icons/dist/";
 
-// sass-lint:disable clean-import-paths
-// @import 'layout/_layout',
-// 'nice.bootstrap/_bootstrap',
-// 'components/_components';
+@import "~@nice-digital/design-system/src/stylesheets/nice-design-system";
+
+// sass-lint: disable clean-import-paths
+@import "layout/_layout", "nice.bootstrap/_bootstrap", "components/_components";
 
 body {
   background: green !important;
