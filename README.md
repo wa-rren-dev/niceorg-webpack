@@ -1,4 +1,8 @@
-# Created dist from Grunt
+`npm i; npm start`
+
+
+
+### Created dist from Grunt
 ```
 dist
     css
