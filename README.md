@@ -1,18 +1,16 @@
-`npm i; npm start`
+1. `npm i`
 
+2. `npm start`
 
+3. Add the webpack scripts to the page you want to test...
 
-### Created dist from Grunt
+```html
+<script src="/css.bundle.js"></script>
+<script src="/javascript.bundle.js"></script>
 ```
-dist
-    css
-    |   app.css
-    |   app.css.map
-    |   app.min.css
-    |   app.min.css.map
-        fonts
-        |   nice-icons.eot
-        |   nice-icons.svg
-        |   nice-icons.ttf
-        |   nice-icons.woff
-        |   nice-icons.woff2
+
+4. `/pages` is served at `http://localhost:3000`
+
+5. Express will restart on changes to `package.json`, `server.js` or `webpack.config.js`
+
+PS. Doesn't build much yet.
